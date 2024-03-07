@@ -9,9 +9,8 @@ public class Main {
     public static void main(String[] args) {
         Logic logic = new Logic();
         Logic2 logic2 = new Logic2();
-        boolean whiletrue = true;
         Scanner scanner = new Scanner(System.in);
-        while (whiletrue) {
+        while (true) {
             try {
                 System.out.println("Write a sentence, letter, number or a Morse code (dots and dashes). (Writing 'stoppa' will exit the program): ");
                 String input = scanner.nextLine().trim(); // trimmar ner input från whitespaces och konverterar till stora bokstäver
