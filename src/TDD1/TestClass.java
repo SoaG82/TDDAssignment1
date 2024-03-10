@@ -84,4 +84,20 @@ public class TestClass {
         String actual = logic.getMorseCode(testdata);
         assertEquals(expected, actual);
     }
+    @Test
+    public void testInputStartWithSpaces() {
+        Logic logic = new Logic();
+        String testdata = " S O S "; // testar mellanslag före och efter ett ord med mellanslag mellan bokstäverna i ordet
+        String expected = "... --- ...";
+        String actual = logic.getMorseCode(testdata);
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void testInputStartWithSpaces2() {
+        Logic logic = new Logic();
+        String testdata = " SOS "; // testar mellanslag före och efter ett ord
+        String expected = "... --- ...";
+        String actual = logic.getMorseCode(testdata);
+        assertEquals(expected, actual);
+    }
 }

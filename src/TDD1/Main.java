@@ -13,7 +13,7 @@ public class Main {
         while (true) {
             try {
                 System.out.println("Write a sentence, letter, number or a Morse code (dots and dashes). (Writing 'stoppa' will exit the program): ");
-                String input = scanner.nextLine().trim(); // trimmar ner input från whitespaces och konverterar till stora bokstäver
+                String input = scanner.nextLine().trim(); // trimmar ner input från whitespaces
 
                 StringBuilder output = new StringBuilder();
 
@@ -21,7 +21,7 @@ public class Main {
                     String morseCode = logic2.getLetterMap(input);
                         output.append(morseCode);
                 } else { // Bokstäver och siffror till Morse kod
-                    String morseCode = logic.getMorseCode(input.toUpperCase()); // kallar på första logik klassen och gör om bokstäver till morse kod samt gör att små bokstäver läses som även stora bokstäver (.toUppercase()).
+                    String morseCode = logic.getMorseCode(input);  // kallar på första logik klassen och gör om bokstäver till morse kod samt gör att små bokstäver läses som även stora bokstäver (.toUppercase()).
                         output.append(morseCode);
                     }
                     if (input.matches("stoppa")) {

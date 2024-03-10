@@ -55,12 +55,12 @@ public class Logic {
     public String getMorseCode(String testdata) {
         StringBuilder result = new StringBuilder();
         for (char c : testdata.toCharArray()) {
-            String morseCode = this.morseCode.get(String.valueOf(c).toUpperCase());
+            String morseCode = this.morseCode.get(String.valueOf(c).toUpperCase().trim()); // trimmar ner whitespace och gör om till stora bokstäver
             if (morseCode != null) {
                 result.append(morseCode);
                 result.append(" ");
             }
         }
-        return result.toString().trim();
+        return result.toString().toUpperCase().trim(); // trimmar ner whitespace och gör om till stora bokstäver
     }
 }
